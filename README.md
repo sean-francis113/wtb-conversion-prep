@@ -1,5 +1,5 @@
 # wtb-conversion-prep
-A python program made to make preparing files for DDS-WTB Conversion easier. Made with modding Granblue Fantasy Relink in mind.
+A python program made to make preparing files for DDS-WTB Conversion easier. Made with modding Granblue Fantasy Relink in mind. It will grab all of the .dds found in the source folder, create folders in the destination folder with the appropriate name ("name.wtb_extracted"), and copies the .dds file into the new folder.
 
 Requires the latest version of Python 3 found here: python.org
 
