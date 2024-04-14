@@ -5,4 +5,4 @@ Requires the latest version of Python 3 found here: python.org
 
 All you need to do to use this program is open a command terminal (for Windows, search for cmd in search bar).
 
-Once open, type "python <path to this main.py> <path to destination folder> <path to folder with your .dds files>".
+Once open, type "python 'path to this main.py' 'path to destination folder' 'path to folder with your .dds files>'".
