@@ -1,16 +1,16 @@
 # wtb-conversion-prep
 ## Requirements:
 
-    * Latest Version of [Python](https://python.org)
-    * Latest Version of [Pillow](https://pypi.org/project/pillow/#files) (Make Sure to Download the Correct File for your OS!)
+* Latest Version of [Python](https://python.org)
+* Latest Version of [Pillow](https://pypi.org/project/pillow/#files) (Make Sure to Download the Correct File for your OS!)
 
 A python program made to make preparing files for DDS-WTB Conversion easier made with modding Granblue Fantasy Relink in mind.
 
 By default, it will do the following:
 
-    * Find all .dds files in the Source Folder.
-    * Flip them vertically to work with GBFR's system.
-    * Package them into folders named "<filename>.wtb_extracted" in the Destination Folder.
+* Find all .dds files in the Source Folder.
+* Flip them vertically to work with GBFR's system.
+* Package them into folders named "filename.wtb_extracted" in the Destination Folder.
 
 However, there are some options you can specify:
 
