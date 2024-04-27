@@ -13,7 +13,7 @@ def ensure_folder_path(path, remove_file=True):
     """
     
     slash = "\\"
-    if(not sys.platform == "win32" or not sys.platform == "win64"):
+    if("/" in path):
         path.replace("\\", "/")
         slash = "/"
         
@@ -43,3 +43,33 @@ def filter_files(file_list, ext):
             final_list.append(file)
             
     return final_list
+    
+def process_cmd(cmd_line, options):
+    flip = True
+    downscale = False
+    delete_source = False
+    source_path = ""
+    dest_path = ""
+    
+    print(cmd_line)
+    print(options)
+    
+    for cmd in cmd_line:
+       if(cmd in options):
+            if(cmd == options[0]): # Source Folder
+                print(f"\tSetting Source Folder Path to {cmd_line[cmd_line.index(cmd) + 1]}")
+                source_path = cmd_line[cmd_line.index(cmd) + 1]
+            elif(cmd == options[1]): # Destination Folder
+                print(f"\tSetting Destination Folder Path to {cmd_line[cmd_line.index(cmd) + 1]}")
+                dest_path = cmd_line[cmd_line.index(cmd) + 1]
+            elif(cmd == options[2]): # No Flip
+                print(f"\tSetting Flip to False")
+                flip = False
+            elif(cmd == options[3]): # Downscale
+                print(f"\tSetting Downscale to True")
+                downscale = True
+            elif(cmd == options[4]): # Delete Source
+                print(f"\tSetting Delete Source to True")
+                delete_source = True
+                
+    return source_path, dest_path, flip, downscale, delete_source
