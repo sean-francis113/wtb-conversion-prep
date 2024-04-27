@@ -51,25 +51,22 @@ def process_cmd(cmd_line, options):
     source_path = ""
     dest_path = ""
     
-    print(cmd_line)
-    print(options)
-    
     for cmd in cmd_line:
        if(cmd in options):
             if(cmd == options[0]): # Source Folder
-                print(f"\tSetting Source Folder Path to {cmd_line[cmd_line.index(cmd) + 1]}")
+                print(f"Setting Source Folder Path to {cmd_line[cmd_line.index(cmd) + 1]}")
                 source_path = cmd_line[cmd_line.index(cmd) + 1]
             elif(cmd == options[1]): # Destination Folder
-                print(f"\tSetting Destination Folder Path to {cmd_line[cmd_line.index(cmd) + 1]}")
+                print(f"Setting Destination Folder Path to {cmd_line[cmd_line.index(cmd) + 1]}")
                 dest_path = cmd_line[cmd_line.index(cmd) + 1]
             elif(cmd == options[2]): # No Flip
-                print(f"\tSetting Flip to False")
+                print(f"Setting Flip to False")
                 flip = False
             elif(cmd == options[3]): # Downscale
-                print(f"\tSetting Downscale to True")
+                print(f"Setting Downscale to True")
                 downscale = True
             elif(cmd == options[4]): # Delete Source
-                print(f"\tSetting Delete Source to True")
+                print(f"Setting Delete Source to True")
                 delete_source = True
                 
     return source_path, dest_path, flip, downscale, delete_source
